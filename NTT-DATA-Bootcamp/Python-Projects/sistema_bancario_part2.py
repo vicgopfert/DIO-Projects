@@ -168,7 +168,8 @@ def visualizar_usuarios(users):
             print(f"Saldo: R${dados['saldo']:.2f}")
             print(f"Limite de Saques Restantes: {dados['limite_saque']}")
             print(f"Transações Realizadas Hoje: {dados['transacoes_hoje']}")
-            print(f"Lista de Contas Registradas: {' | '.join([f'{conta['numero_conta']}' for conta in dados['contas']]) if dados['contas'] else 'Nenhuma'}")
+            contas_str = ' | '.join([f"{conta['numero_conta']}" for conta in dados['contas']]) if dados['contas'] else 'Nenhuma'
+            print(f"Lista de Contas Registradas: {contas_str}")
             print("==========================================")
     else:
         print("Nenhum usuário cadastrado.")
