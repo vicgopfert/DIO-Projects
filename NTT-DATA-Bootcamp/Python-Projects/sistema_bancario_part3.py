@@ -221,7 +221,7 @@ def menu_cliente(cliente_logado):
         elif escolha == '2':
             valor = float(input(f"Digite o valor de Saque (Máximo por saque: R$500 | Saques Restantes: {conta.limite_saque}): R$"))
             if valor > 0:
-                conta.sacar(valor)  # Saque na primeira conta do cliente
+                conta.sacar(valor)  # Saque na conta do cliente
             else:
                 print("Valor de Saque Inválido. Tente Novamente.")
         elif escolha == '3':
